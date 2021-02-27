@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>funtion</title>
+</head>
+<body>
+   <div id='d1'></div>
+    <script>
+function ab(x,y){
+        return x*y;
+    }
+        function new_text(text){
+            document.getElementById('d1').innerHTML = text;
+        }
+        var f1_test=new Function('x','y','return x+y;');
+        var f2_test = function (w,h){return w*h;}
+    var t=10*10+ab(5,5);
+        document.write(t);
+        new_text('<h2>Test Function</h2>');
+        document.write( '   '+f1_test(10,25));
+        document.write( '   '+f2_test(10,20));
+    var w1=100; var h1=200;
+     var w2=150; var h2=150;
+var w1=100; var h1=200;
+var w2=100; var h2=300; 
+        
+        if(f2_test(w1,h1)>f2_test(w2,h2)) { document.write(' Первый больше по площади второго'); 
+                                          }
+        else if(f2_test(w1,h1)<f2_test(w2,h2)){
+        document.write(' Второй больше по площади первого'); 
+        }
+         else if(f2_test(w1,h1)==f2_test(w2,h2)){
+        document.write(' ='); 
+        }
+    </script>
+</body>
+</html>
